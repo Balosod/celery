@@ -29,3 +29,7 @@ def add():
     asyncio.run(async_function())
     print('This task runs every one minutes')
   
+
+
+#Run with 
+#huey_consumer.py tasks.huey
