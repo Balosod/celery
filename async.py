@@ -47,3 +47,17 @@ def add():
     
 #Run with 
 #celery -A tasks worker -B
+
+
+
+    # Celery Configuration Options
+    broker_url="redis://localhost:6379/0"
+    result_backend="redis://localhost"
+
+    beat_schedule={'add-every-30-seconds': {
+        'task': 'tasks.add',
+        'schedule': 10.0
+    },}
+    timezone = "Africa/Lagos"
+    enable_utc=True
+    
