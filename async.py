@@ -44,3 +44,6 @@ async def async_function():
 def add():
     # Does stuff but let's simplify it
     asyncio.run(async_function())
+    
+#Run with 
+#celery -A tasks worker -B
